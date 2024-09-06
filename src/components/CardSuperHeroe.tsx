@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import superman from "../mocks/only-one.json";
+import superman from "../../public/only-one.json";
 import { PowerStatsCard } from "../ui/PowerStatsCard";
 import { BiographyCard } from "../ui/BiographyCard";
 import { AppearanceCard } from "../ui/AppearanceCard";
