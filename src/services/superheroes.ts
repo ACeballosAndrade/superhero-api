@@ -8,7 +8,7 @@ interface Props {
 export const searchSuperheroes = async({query}: Props) => {
   //if(query === '') return null
   try {
-    const response = await fetch(`https://superheroapi.com/${APIKEY}/search/${query}`)
+    const response = await fetch(`/api/api/${APIKEY}/search/${query}`)
     const json = await response.json()
     
     if( json.response == 'error'){ 
@@ -26,7 +26,7 @@ export const searchSuperheroes = async({query}: Props) => {
  export const getSuperHeroe = async (idSH: string)  => {
    if(idSH !== ''){
      try {
-       const response = await fetch(`https://superheroapi.com/${APIKEY}/${idSH}`)
+       const response = await fetch(`/api/api//${APIKEY}/${idSH}`)
        const heroe = await response.json()
        return heroe
      } catch (error) {
